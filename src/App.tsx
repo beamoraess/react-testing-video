@@ -1,8 +1,17 @@
+import { useState } from "react";
+import Button from "./Button";
+
+
 function App() {
+  const [ message, setMessage ] = useState("Let's learn about testing library");
+
   return (
     <div>
       <h1>Hello world!</h1>
-      <p>Let's learn more about testing in React</p>
+      <p>{message}</p>
+      <Button disabled={false} children={undefined} onClick={function (): void {
+        throw new Error("Function not implemented.");
+      } }></Button>
     </div>
   );
 }
